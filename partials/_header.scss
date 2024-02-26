@@ -1,0 +1,52 @@
+@use 'responsive';
+@use 'variables';
+
+.header-nav {
+  margin-top: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & .nav-hamburger {
+    display: none;
+    @include responsive.sm {
+      display: block;
+    }
+    @include responsive.md {
+      display: block;
+    }
+  }
+
+  & .nav-logo-wrapper {
+    display: flex;
+  }
+
+  & .navbar {
+    display: flex;
+    column-gap: 48px;
+    text-transform: capitalize;
+    @include responsive.sm {
+      display: none;
+    }
+    @include responsive.md {
+      display: none;
+    }
+
+    & li {
+      list-style: none;
+
+      & .button {
+        color: black;
+        font-family: variables.$avenir-font;
+        font-size: 16px;
+
+        &.button-primary {
+          color: variables.$color-white;
+          padding: 10px 15px 10px 15px;
+          border-radius: 3px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

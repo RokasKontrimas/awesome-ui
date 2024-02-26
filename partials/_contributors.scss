@@ -1,0 +1,97 @@
+@use 'responsive';
+@use 'variables';
+
+.contributors {
+  display: flex;
+  flex-direction: row;
+  column-gap: 165px;
+
+  @include responsive.sm {
+    column-gap: 20px;
+  }
+  @include responsive.md {
+    column-gap: 20px;
+  }
+
+  & .contributor-image {
+    position: relative;
+    @include responsive.sm {
+      left: -70px;
+    }
+
+
+    & .image-decoration {
+      position: absolute;
+      top: 44px;
+      right: -60px;
+      z-index: -10;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(197.92deg, rgba(239, 128, 49, 0) -227.37%, rgba(239, 128, 49, 0.15) 1.58%, rgba(239, 128, 49, 0) 103.02%);
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+
+    }
+  }
+
+  & .contributor-content {
+
+    & a {
+      display: inline-block;
+
+      &::after {
+        @include responsive.sm {
+
+          padding-left: 20px;
+        }
+        @include responsive.md {
+
+          padding-left: 20px;
+        }
+        color: variables.$color-white;
+        content: url("../images/arrow.svg");
+      }
+    }
+
+    & h2:first-child {
+      text-transform: uppercase;
+      color: variables.$text-secondary;
+      font-size: variables.$subtitle-size;
+      @include responsive.sm {
+        font-size: variables.$subtitle-size-sm;
+      }
+      @include responsive.md {
+        font-size: variables.$subtitle-size-sm;
+      }
+      font-family: variables.$avenir-font;
+      font-weight: 500;
+      margin: 0 0 17px;
+    }
+
+    & h2:nth-of-type(2) {
+      text-transform: uppercase;
+      color: variables.$text-primary;
+      font-size: variables.$title-size;
+      @include responsive.sm {
+        font-size: variables.$title-size-sm;
+      }
+      @include responsive.md {
+        font-size: variables.$title-size-sm;
+      }
+      font-family: variables.$avenir-font;
+      font-weight: 500;
+      margin: 0 0 24px;
+    }
+
+    & p {
+      margin: 0 0 40px;
+      color: rgba(79, 79, 79, 1);
+      font-family: variables.$avenir-font;
+
+    }
+  }
+}

@@ -1,0 +1,122 @@
+@use 'responsive';
+@use 'variables';
+
+.collaborators {
+  margin-top: 147px;
+  text-align: center;
+  margin-bottom: 124px;
+
+  & .title {
+    color: variables.$text-secondary;
+    font-size: variables.$subtitle-size;
+    @include responsive.sm {
+      font-size: variables.$subtitle-size-sm;
+    }
+    @include responsive.md {
+      font-size: variables.$subtitle-size-sm;
+    }
+    font-family: variables.$avenir-font;
+    font-weight: 500;
+    margin: 0 0 17px;
+    text-transform: uppercase;
+  }
+
+  & .subtitle {
+    color: variables.$text-primary;
+    font-size: variables.$title-size;
+    @include responsive.sm {
+      font-size: variables.$title-size-sm;
+    }
+    @include responsive.md {
+      font-size: variables.$title-size-sm;
+    }
+    font-family: variables.$avenir-font;
+    font-weight: 500;
+    margin: 0 0 118px;
+    text-transform: uppercase;
+  }
+
+  & .collaborator-items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    overflow-x: scroll;
+    overflow-y: clip;
+    overflow-clip-margin: 1em;
+
+    & .collaborator-card {
+      background-color: variables.$color-white;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 78px 50px 72px;
+      @include responsive.sm {
+        padding: 10px 10px 12px;
+
+      }
+      border-radius: 8px;
+
+      & .card-decoration {
+        position: absolute;
+        z-index: -1000;
+        left: -30px;
+        bottom: -30px;
+        width: 60%;
+        height: 60%;
+        background-image: radial-gradient(circle, #ffd664 2px, transparent 1px);
+        background-size: 10px 10px;
+      }
+
+      &:first-child {
+        box-shadow: 0px -30px 60px -40px rgba(0, 0, 0, 0.17) inset;
+      }
+
+      &:nth-child(3n) {
+        box-shadow: 0px -30px 60px -40px rgba(0, 0, 0, 0.17) inset;
+
+        & .collaborator-title {
+          text-transform: uppercase;
+        }
+
+      }
+
+      &:nth-child(2n) {
+        background-color: variables.$background-primary;
+        color: variables.$color-white;
+      }
+
+      & .collaborator-logo {
+        display: flex;
+        text-align: left;
+
+        & .collaborator-image {
+          display: block;
+        }
+      }
+
+      & .collaborator-content {
+        text-align: left;
+      }
+
+      &:nth-of-type(3) {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        & .collaborator-text-decoration {
+          z-index: -10;
+          transform: rotate(180deg);
+          position: absolute;
+          width: 89%;
+          height: 60%;
+          bottom: -47px;
+          right: -106px;
+          background: linear-gradient(197.92deg, rgba(239, 128, 49, 0) -227.37%, rgba(239, 128, 49, 0.15) 1.58%, rgba(239, 128, 49, 0) 103.02%);
+        }
+      }
+
+    }
+  }
+
+}

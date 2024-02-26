@@ -1,0 +1,40 @@
+@font-face {
+  font-family: Avenir-next;
+  src: url("../fonts/AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+  font-family: Avenir-next-bold;
+  src: url("../fonts/AvenirNextLTPro-Bold.otf");
+}
+
+$title-size: 41px;
+$title-size-sm: 20px;
+$subtitle-size: 21px;
+$subtitle-size-sm: 13px;
+$main-title: 48px;
+$main-title-sm: 24px;
+$main-paragraph: 20px;
+$main-paragraph-sm: 10px;
+$paragraph: 16px;
+$paragraph-sm: 8px;
+$card-title: 24px;
+$card-title-sm: 13px;
+$card-paragraph: 13px;
+$card-paragraph-sm: 8px;
+$collection-card-title: 16px;
+$collection-card-title-sm: 12px;
+$collection-card-subtitle: 13px;
+$collection-card-subtitle-sm: 10px;
+$collection-card-paragraph: 16px;
+$collection-card-paragraph-sm: 12px;
+$footer-paragraph: 14px;
+$footer-navigation-title: 20px;
+$footer-navigation-link: 16px;
+$avenir-font: Avenir-next, "sans-serif";
+$avenir-font-bold: Avenir-next-bold, "sans-serif";
+$primary-button: linear-gradient(to right, #647B64, #66AC66);
+$color-white: white;
+$text-primary: rgba(100, 123, 100, 1);
+$background-primary: rgba(100, 123, 100, 1);
+$text-secondary: rgba(243, 181, 98, 1);

@@ -1,0 +1,187 @@
+@use 'responsive';
+@use 'variables';
+
+.services {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  column-gap: 109px;
+  @include responsive.sm {
+    flex-direction: column;
+    column-gap: 20px;
+  }
+  @include responsive.md {
+    flex-direction: column;
+    column-gap: 20px;
+  }
+
+  & .services-content {
+    width: 40%;
+    @include responsive.sm {
+      width: 100%;
+    }
+
+    @include responsive.md {
+      width: 100%;
+    }
+
+    & .services-content-decoration {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(224deg, rgba(239, 128, 49, 0) -335.51%, rgba(239, 128, 49, 0.15) -93.24%, rgba(239, 128, 49, 0) 101.45%);
+    }
+
+    & :first-child {
+      color: variables.$text-secondary;
+      font-size: variables.$subtitle-size;
+      @include responsive.sm {
+        font-size: variables.$subtitle-size-sm;
+
+      }
+      @include responsive.md {
+        font-size: variables.$subtitle-size-sm;
+
+      }
+      font-family: variables.$avenir-font;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+
+    & h2:nth-of-type(2) {
+      color: variables.$text-primary;
+      font-size: variables.$title-size;
+      @include responsive.sm {
+        font-size: variables.$title-size-sm;
+      }
+      @include responsive.md {
+        font-size: variables.$title-size-sm;
+      }
+      font-family: variables.$avenir-font;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin: 17px 0 40px;
+    }
+
+    p {
+      margin: 0 0 40px;
+      font-size: variables.$paragraph;
+      @include responsive.sm {
+        font-size: variables.$main-paragraph-sm;
+      }
+      @include responsive.md {
+        font-size: variables.$main-paragraph-sm;
+      }
+      font-family: variables.$avenir-font;
+      font-weight: 400;
+    }
+
+    & a {
+      display: inline-block;
+
+      &::after {
+        @include responsive.sm {
+
+          padding-left: 20px;
+        }
+        @include responsive.md {
+
+          padding-left: 20px;
+        }
+        color: variables.$color-white;
+        content: url("../images/arrow.svg");
+      }
+    }
+  }
+
+  & .services-cards {
+    width: 60%;
+    @include responsive.sm {
+      width: 100%;
+    }
+    @include responsive.md {
+      width: 100%;
+    }
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 38px;
+    row-gap: 24px;
+
+    & .card {
+      padding: 40px 25px 45px 40px;
+      @include responsive.sm {
+        padding: 0;
+      }
+      @include responsive.md {
+        padding: 0;
+      }
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      transition: ease-out 0.5s;
+
+      & .card-title {
+
+        & h2 {
+          font-size: variables.$card-title;
+          @include responsive.sm {
+            font-size: variables.$card-title-sm;
+          }
+          @include responsive.md {
+            font-size: variables.$card-title-sm;
+          }
+          font-family: variables.$avenir-font;
+          font-weight: 500;
+          margin: 0;
+          text-transform: uppercase;
+        }
+
+      }
+
+      & .card-description {
+
+        & p {
+          font-size: variables.$card-paragraph;
+          @include responsive.sm {
+            font-size: variables.$card-paragraph-sm;
+          }
+          @include responsive.md {
+            font-size: variables.$card-paragraph-sm;
+          }
+          font-family: variables.$avenir-font;
+          font-weight: 400;
+          margin: 0;
+        }
+      }
+
+      &:hover {
+        box-shadow: 1px 1px 12px 7px rgba(155, 148, 148, 0.17);
+        transition: ease-in .5s;
+        scale: 1.1;
+
+        & .card-image {
+          background-color: variables.$background-primary;
+          transition: ease-in .5s;
+        }
+
+        & svg path {
+          fill: white;
+        }
+
+      }
+
+      & .card-image {
+        display: inline-block;
+        background-color: #f5ecec;
+        border-radius: 8px;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        transition: ease-out 0.5s;
+      }
+    }
+  }
+}

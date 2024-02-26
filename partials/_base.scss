@@ -1,0 +1,85 @@
+@use 'responsive';
+@use 'variables';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(197deg, rgba(247, 231, 225, 1) 0%, rgba(255, 255, 255, 1) 100%
+  );
+}
+
+
+.container {
+  @include responsive.lg {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+  @include responsive.sm {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 40px;
+  }
+  @include responsive.md {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 40px;
+  }
+}
+
+.container-2 {
+  position: relative;
+  overflow: hidden;
+  @include responsive.lg {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+
+  @include responsive.sm {
+    padding-left: 32px;
+    padding-right: 0;
+  }
+  @include responsive.md {
+    padding-left: 32px;
+    padding-right: 0;
+  }
+}
+
+.container-3 {
+  @include responsive.lg {
+    padding-left: 106px;
+    padding-right: 106px;
+  }
+
+  @include responsive.sm {
+    padding: 0;
+  }
+  @include responsive.md {
+    padding: 0;
+  }
+}
+
+.button {
+  text-decoration: none;
+}
+
+.button-primary {
+  background-image: variables.$primary-button;
+  color: variables.$color-white;
+}
+
+.section-button {
+  text-transform: uppercase;
+  padding: 26px 29px;
+  @include responsive.sm {
+    padding: 13px 10px;
+  }
+  @include responsive.md {
+    padding: 13px 10px;
+  }
+  font-family: variables.$avenir-font;
+}
+

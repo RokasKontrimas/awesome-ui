@@ -1,0 +1,122 @@
+@use 'responsive';
+@use 'variables';
+
+.hero-container {
+  position: relative;
+  height: 100vh;
+
+  & .ellipse-119 {
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 72px;
+  margin-bottom: 140px;
+  position: relative;
+
+  & .hero-content {
+    width: 50%;
+    @include responsive.sm {
+      width: 70%;
+    }
+
+    & .title {
+      width: 100%;
+
+      h1 {
+        font-size: variables.$main-title;
+        @include responsive.sm {
+          font-size: variables.$main-title-sm;
+        }
+        @include responsive.md {
+          font-size: variables.$main-title-sm;
+        }
+        font-family: variables.$avenir-font;
+        font-weight: 500;
+        margin: 0;
+        padding-bottom: 24px;
+        text-transform: uppercase;
+      }
+
+      & img {
+        position: absolute;
+        top: -24px;
+        left: 50%;
+        transform: translate(-140%, 0);
+
+
+      }
+    }
+
+    & .paragraph {
+      width: 100%;
+
+      p {
+        font-size: variables.$main-paragraph;
+        @include responsive.sm {
+          font-size: variables.$main-paragraph-sm;
+        }
+        @include responsive.md {
+          font-size: variables.$main-paragraph-sm;
+        }
+        font-family: variables.$avenir-font;
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+
+
+    & .hero-button-wrapper {
+      margin-top: 40px;
+
+      & .hero-button {
+        display: inline-block;
+        color: variables.$color-white;
+        font-size: 16px;
+        font-weight: 600;
+
+
+        &::after {
+          @include responsive.sm {
+
+            padding-left: 20px;
+          }
+          @include responsive.md {
+
+            padding-left: 20px;
+          }
+          padding-left: 142px;
+          color: variables.$color-white;
+          content: url("../images/arrow.svg");
+        }
+      }
+    }
+
+
+  }
+
+
+  & .hero-image-wrapper {
+    width: 30%;
+
+    & img {
+
+      @include responsive.sm {
+        position: absolute;
+        left: 41%;
+        top: -130px;
+      }
+      @include responsive.md {
+        position: absolute;
+        left: 41%;
+        top: -130px;
+      }
+    }
+  }
+}
