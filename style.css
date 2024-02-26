@@ -662,6 +662,7 @@ footer .footer-wrapper {
   footer .footer-wrapper {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 900px) {
@@ -777,9 +778,14 @@ footer .footer-wrapper .footer-section-4 {
   flex-direction: column;
   justify-content: space-evenly;
 }
+@media screen and (max-width: 375px) {
+  footer .footer-wrapper .footer-section-4 {
+    order: 3;
+  }
+}
 @media screen and (max-width: 900px) {
   footer .footer-wrapper .footer-section-4 {
-    order: 1;
+    order: 3;
   }
 }
 footer .footer-wrapper .footer-section-4 h3 {
