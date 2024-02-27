@@ -239,7 +239,7 @@ body {
 .hero .hero-content .hero-button-wrapper .hero-button::after {
   padding-left: 142px;
   color: white;
-  content: url("../images/arrow.svg");
+  content: url("./images/arrow.svg");
 }
 @media screen and (max-width: 375px) {
   .hero .hero-content .hero-button-wrapper .hero-button::after {
@@ -594,7 +594,7 @@ body {
 }
 .contributors .contributor-content a::after {
   color: white;
-  content: url("../images/arrow.svg");
+  content: url("./images/arrow.svg");
 }
 @media screen and (max-width: 375px) {
   .contributors .contributor-content a::after {
@@ -823,7 +823,7 @@ footer .footer-wrapper .footer-section-4 a {
 }
 footer .footer-wrapper .footer-section-4 a::after {
   color: white;
-  content: url("../images/arrow.svg");
+  content: url("./images/arrow.svg");
 }
 @media screen and (max-width: 375px) {
   footer .footer-wrapper .footer-section-4 a::after {
@@ -929,7 +929,7 @@ footer .footer-wrapper .footer-section-4 a::after {
 }
 .services .services-content a::after {
   color: white;
-  content: url("../images/arrow.svg");
+  content: url("./images/arrow.svg");
 }
 @media screen and (max-width: 375px) {
   .services .services-content a::after {
